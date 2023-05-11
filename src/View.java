@@ -40,7 +40,7 @@ public class  View extends JFrame implements PropertyChangeListener {
     }
 
     public void doCalc(){
-        controller.doCalc(jtValue1.getText(),"15",'+');
+        controller.doCalc(jtValue1.getText(),"150",'+');
 
     }
 
