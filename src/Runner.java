@@ -10,6 +10,9 @@ public class Runner {
         View view = new View();
         view.setController(controller);
         view.doCalc();
+
+
+
  //         char operator;
 //         double num1,num2;
 //        Scanner input = new Scanner(System.in);
