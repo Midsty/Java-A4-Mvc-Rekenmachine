@@ -16,12 +16,13 @@ public class  View extends JFrame implements PropertyChangeListener {
         JPanel panel = new JPanel();
         this.add(panel);
         jtValue1 = new JTextField("10");
-        panel.add(jtValue1);
+       // panel.add(jtValue1); vakjes uitgezet
         jtResult = new JTextField("result");
-        panel.add(jtResult);
+       // panel.add(jtResult); vakjes uitgezet
 
         //Maakt de knoppen aan
         JButton b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, ba, bs, bd, bm, be, beq, beq1;
+        JTextField display;
 
         //De nummers van de rekenmachine
         b0 = new JButton("0");
@@ -45,6 +46,9 @@ public class  View extends JFrame implements PropertyChangeListener {
         bm = new JButton("*");
         beq = new JButton("C");
 
+        // display schermpje
+        display = new JTextField("zonder text is dit veld heel klein");
+
         //Laat de knoppen zien
         {
             panel.add(b0);
@@ -52,6 +56,7 @@ public class  View extends JFrame implements PropertyChangeListener {
             panel.add(b2);
             panel.add(bd);
         }
+
         {
         panel.add(b3);
         panel.add(b4);
@@ -69,6 +74,9 @@ public class  View extends JFrame implements PropertyChangeListener {
             panel.add(beq1);
             panel.add(beq);
             panel.add(ba);
+        }
+        {
+            panel.add(display);
         }
 
 
@@ -102,14 +110,14 @@ public class  View extends JFrame implements PropertyChangeListener {
         controller.setPropertyChangeListener(this);
     }
 
-    public void doCalc(){
-        controller.doCalc(jtValue1.getText(),"150",'+');
+   public void doCalc(){
+       controller.doCalc(jtValue1.getText(),"150",'+');
 
     }
 
-    @Override
+   @Override
     public void propertyChange(PropertyChangeEvent evt) {
-        int result = (int) evt.getNewValue();
+       int result = (int) evt.getNewValue();
         jtResult.setText(Integer.toString(result));
     }
 }
