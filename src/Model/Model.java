@@ -1,3 +1,5 @@
+package Model;
+
 public class Model {
 
     int value1 =0;

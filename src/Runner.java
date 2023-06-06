@@ -1,3 +1,7 @@
+import Controllers.Controller;
+import Model.Model;
+import View.View;
+
 public class Runner {
 
     public static void main(String[] args) {
