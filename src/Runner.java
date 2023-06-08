@@ -1,3 +1,7 @@
+import Controllers.Controller;
+import Model.Model;
+import View.View;
+
 import javax.swing.*;
 
 public class Runner {
@@ -15,7 +19,7 @@ public class Runner {
         view.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         view.setSize(250, 300);
         view.setLocationRelativeTo(null);
-        view.setTitle("Calcculator");
+        view.setTitle("Rekenmachine");
         view.setVisible(true);
 
 

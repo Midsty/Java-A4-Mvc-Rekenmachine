@@ -1,7 +1,9 @@
+package View;
+
+import Controllers.Controller;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
@@ -24,14 +26,19 @@ public class  View extends JFrame implements PropertyChangeListener {
 
     public View() {
 
-        this.setSize(400, 300);
+        this.setSize(500, 500);
         JPanel panel = new JPanel();
 
         this.add(panel);
         jtValue1 = new JTextField("10");
        // panel.add(jtValue1); vakjes uitgezet
-        jtResult = new JTextField("result");
-       // panel.add(jtResult); vakjes uitgezet
+        jtResult = new JTextField("uitkomst");
+        panel.add(jtResult); //vakjes uitgezet\
+
+        jtResult.setPreferredSize(new Dimension(150,30));
+
+        setResizable(false);
+
 
         //Maakt de knoppen aan
         JButton b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, ba, bs, bd, bm, be, beq, beq1;

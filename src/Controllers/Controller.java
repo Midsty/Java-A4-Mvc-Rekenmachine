@@ -1,3 +1,7 @@
+package Controllers;
+
+import Model.Model;
+
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
