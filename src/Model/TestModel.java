@@ -1,3 +1,5 @@
+package Model;
+
 import Model.Model;
 import org.junit.jupiter.api.Test;
 
