@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Runner {
 
     public static void main(String[] args) {
@@ -10,6 +12,11 @@ public class Runner {
         View view = new View();
         view.setController(controller);
         view.doCalc();
+        view.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        view.setSize(250, 300);
+        view.setLocationRelativeTo(null);
+        view.setTitle("Calcculator");
+        view.setVisible(true);
 
 
 
