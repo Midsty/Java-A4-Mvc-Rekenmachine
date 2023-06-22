@@ -5,8 +5,30 @@ public class Model {
     int value1 =0;
     int value2 =0;
 
+    String input = "";
+
     char operator = '+';
 
+
+    public void addInput(char input){
+        if(Character.isDigit(input)){
+            this.input += input;
+        } else {
+            if(input == '='){
+                value2 = Integer.parseInt(this.input);
+                this.input = "" + calculate();
+
+            } else {
+                value1 = Integer.parseInt(this.input);
+                this.input = "";
+                operator = input;
+            }
+        }
+    }
+
+    public String getInput(){
+        return input;
+    }
     public int calculate(){
 
         switch (operator)

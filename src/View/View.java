@@ -4,6 +4,8 @@ import Controllers.Controller;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
@@ -62,13 +64,27 @@ public class  View extends JFrame implements PropertyChangeListener {
 
         // Printen jbuttons met text symbolen.
 
+        ActionListener knopHandler = new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e ) {
+                JButton actionButton = (JButton)e.getSource();
+                //Haalt de uitkomst op van de controller
+                jtResult.setText(controller.processInput(actionButton.getText()));
+            }
+        };
+
         for (int bl = 0; bl < BUTTON_LABELS.length; bl++) {
             if (BUTTON_LABELS[bl] == ' ') {
                 knopPanel.add(new JLabel());
             } else {
-                knopPanel.add(new JButton("" + BUTTON_LABELS[bl]));
+                JButton b = new JButton("" + BUTTON_LABELS[bl]);
+                b.addActionListener(knopHandler);
+                knopPanel.add(b);
             }
         }
+
+
+
     }
 
     public void setController(Controller controller) {
@@ -89,6 +105,8 @@ public class  View extends JFrame implements PropertyChangeListener {
        font1 = new Font("consola", Font.PLAIN, 30);
 
        jtResult.setFont(font1);
+
+       jtResult.setEditable(false);
     }
 
 

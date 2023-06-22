@@ -7,10 +7,26 @@ import java.beans.PropertyChangeSupport;
 
 public class Controller {
 
-    PropertyChangeSupport pcs = new PropertyChangeSupport(this);
-
+    //Properties voor de uitkomst
     Model model;
+    //Symbolen
+    public String sN0,N1, N2;
 
+    PropertyChangeSupport pcs;
+
+    public Controller() {
+     pcs = new PropertyChangeSupport(this);
+
+    }
+
+    //Stuurt de input weer terug naar de Model
+    public String processInput(String input){
+        model.addInput(input.charAt(0));
+       return model.getInput();
+    }
+
+
+    //Getters en setters voor de value 1,2 en operators
     public void doCalc(String value1, String value2, char operator){
         model.setValue1(Integer.parseInt(value1));
         model.setValue2(Integer.parseInt(value2));
