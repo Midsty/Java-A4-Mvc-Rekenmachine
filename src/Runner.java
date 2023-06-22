@@ -17,7 +17,6 @@ public class Runner {
         view.setController(controller);
         view.doCalc();
         view.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        view.setSize(250, 300);
         view.setLocationRelativeTo(null);
         view.setTitle("Rekenmachine");
         view.setVisible(true);
