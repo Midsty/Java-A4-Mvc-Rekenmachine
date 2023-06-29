@@ -31,6 +31,7 @@ public class Model {
     }
     public int calculate(){
 
+        //Bereken symboeln
         switch (operator)
         {
             case '+': return value1 + value2;

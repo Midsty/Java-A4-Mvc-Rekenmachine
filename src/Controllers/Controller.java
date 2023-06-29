@@ -10,7 +10,7 @@ public class Controller {
     //Properties voor de uitkomst
     Model model;
     //Symbolen
-    public String sN0,N1, N2;
+    //public String sN0,N1, N2;
 
     PropertyChangeSupport pcs;
 
